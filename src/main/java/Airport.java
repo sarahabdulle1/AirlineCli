@@ -32,6 +32,19 @@ public class Airport {
 //    method
     public void addFlight(Flight flight){
         flightList.add(flight);
-
     }
+
+    // Method to display flights
+
+//    public String displayFlights(Airport airportName
+////        for (int i = 0; i <= flightList.size(); i++){
+////            airportName[i] = flightList.get(i)
+////    }
+
+    public void displayFlights(){
+        for(int i = 0; i <= flightList.size(); i++) {
+            System.out.println(String.format("The flights today: %s", flightList.get(i).getDestination(), flightList.get(i).getID()));
+        }
+    }
+
 }

@@ -46,6 +46,9 @@ public class Flight {
         passengers.add(passenger);
     }
 
+    public String cancelFlight(){
+        return this.getID() + " flight is cancelled";
+    }
 
 
 }
