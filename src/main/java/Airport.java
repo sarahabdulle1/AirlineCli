@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.OptionalDouble;
 
 public class Airport {
 
@@ -6,8 +7,8 @@ public class Airport {
 
     ArrayList<Flight> flightList;
 
-//    constructor
-    public Airport(String name){
+    //    constructor
+    public Airport(String name) {
         this.name = name;
         this.flightList = new ArrayList<>();
     }
@@ -29,8 +30,8 @@ public class Airport {
     }
 //    getters
 
-//    method
-    public void addFlight(Flight flight){
+    //    method
+    public void addFlight(Flight flight) {
         flightList.add(flight);
     }
 
@@ -41,10 +42,9 @@ public class Airport {
 ////            airportName[i] = flightList.get(i)
 ////    }
 
-    public void displayFlights(){
-        for(int i = 0; i <= flightList.size(); i++) {
-            System.out.println(String.format("The flights today: %s", flightList.get(i).getDestination(), flightList.get(i).getID()));
+    public void displayFlights() {
+        for (int i = 0; i <= flightList.size(); i++) {
+            System.out.println(String.format("The flights today: %s, %s", flightList.get(i).getDestination(), flightList.get(i).getID()));
         }
     }
-
 }

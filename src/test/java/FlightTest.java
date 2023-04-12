@@ -48,9 +48,5 @@ public class FlightTest {
         assertThat(flight1.cancelFlight()).isEqualTo("BA123 flight is cancelled");
     }
 
-//    @Test
-//    public void canDisplayFlights(){
-//        airport.displayFlights();
-//    }
 
 }
