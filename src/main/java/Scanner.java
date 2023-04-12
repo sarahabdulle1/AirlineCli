@@ -20,12 +20,9 @@ public class Scanner {
             else {
                 System.out.println("Flight not found");
             }
-
 //    second scanner
-
            java.util.Scanner sc = new java.util.Scanner(System.in);
             System.out.println("Enter your contact details");
-
 
             while (true) {
                 String input2 = sc.nextLine();

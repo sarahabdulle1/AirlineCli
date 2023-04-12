@@ -26,6 +26,6 @@ public class Runner {
     airport1.addFlight(flight2);
     airport1.addFlight(flight3);
 
-    airport1.flightList.size();
+        System.out.println(airport1.flightList.size());
     }
 }
