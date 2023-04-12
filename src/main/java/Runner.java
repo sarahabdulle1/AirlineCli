@@ -1,8 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Runner {
     public static void main(String[] args) {
 
@@ -12,40 +7,25 @@ public class Runner {
         Flight flight;
 
 
-        Scanner scanner1 = new Scanner(System.in);
 
-        System.out.println("Enter your flightID");
+        Passenger passenger1 = new Passenger("Anna", 321, 44);
+        Passenger passenger2 = new Passenger("Leya", 456, 44);
+        Flight flight1 = new Flight("Oman", "OM123");
+        Flight flight2 = new Flight("Dubai", "DXB123");
+        Flight flight3 = new Flight("Venice", "VEN123");
+        Airport airport1 = new Airport("Heathrow");
 
-//        while(true){
-            String input1 = scanner1.nextLine();
+//  Running methods
 
-            if (input1.equals("BA123")){
-                System.out.println("Your flight boards at 10AM");
-            }
-            else {
-                System.out.println("Flight not found");
-            }
+    flight1.addPassenger(passenger1);
+    flight1.addPassenger(passenger2);
+        System.out.println(flight1.getPassengers());
 
-//    second scanner
+// adding flights to airport flightList
+    airport1.addFlight(flight1);
+    airport1.addFlight(flight2);
+    airport1.addFlight(flight3);
 
-           Scanner sc = new Scanner(System.in);
-            System.out.println("Enter your contact details");
-
-
-            while (true) {
-                String input2 = sc.nextLine();
-                try {
-                    if (Integer.parseInt(input2) == 44) {
-                        System.out.println("Your contact details are in the system");
-                        break;
-                    } else {
-                        System.out.println("Contact not found. Try again.");
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Please enter a number");
-                }
-            }
-
+    airport1.flightList.size();
     }
-
 }
