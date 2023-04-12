@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 public class Flight {
-
-    String destination;
-    int ID;
+    Passenger passenger;
+    private String destination;
+    private String ID;
     ArrayList <Passenger> passengers;
 
-    ArrayList <Flight> flights;
-    public Flight(String destination, int ID, ArrayList passengers){
+    ArrayList <Flight> flightList;
+    public Flight(String destination, String ID){
         this.destination = destination;
         this.ID = ID;
-        this.passengers = passengers;
+        this.passengers = new ArrayList<>();
     }
 
     public String getDestination() {
@@ -21,15 +21,16 @@ public class Flight {
         this.destination = destination;
     }
 
-    public int getID() {
+    public String getID() {
         return this.ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
     public ArrayList<Passenger> getPassengers() {
+
         return this.passengers;
     }
 
@@ -37,7 +38,14 @@ public class Flight {
         this.passengers = passengers;
     }
 
+    public ArrayList<Flight> getFlightList(){
+        return this.flightList;
+    }
+//    method
+    public void addPassenger(Passenger passenger){
+        passengers.add(passenger);
+    }
 
-    //public void addFlight()
+
 
 }
